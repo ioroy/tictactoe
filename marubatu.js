@@ -54,7 +54,7 @@ function cpuMark() {
   
   var k = 0;
   while(k < len) {
-    if(ID(IDs[k]).value != "o" && ID(IDs[k]).value != "x") {
+    if(ID(IDs[k]).innerText != "o" && ID(IDs[k]).innerText != "x") {
       ID(IDs[k]).innerText = "x";
       turn++;
       break;
@@ -69,26 +69,26 @@ function cpuMark() {
 // 勝敗判定
 function judge() {
   // 勝ち
-  if((ID("b0").value == "o" && ID("b1").value == "o" && ID("b2").value == "o") ||
-    (ID("b3").value == "o" && ID("b4").value == "o" && ID("b5").value == "o") ||
-    (ID("b6").value == "o" && ID("b7").value == "o" && ID("b8").value == "o") ||
-    (ID("b0").value == "o" && ID("b3").value == "o" && ID("b6").value == "o") ||
-    (ID("b1").value == "o" && ID("b4").value == "o" && ID("b7").value == "o") ||
-    (ID("b2").value == "o" && ID("b5").value == "o" && ID("b8").value == "o") ||
-    (ID("b0").value == "o" && ID("b4").value == "o" && ID("b8").value == "o") ||
-    (ID("b2").value == "o" && ID("b4").value == "o" && ID("b6").value == "o")) {
+  if((ID("b0").innerText == "o" && ID("b1").innerText == "o" && ID("b2").innerText == "o") ||
+    (ID("b3").innerText == "o" && ID("b4").innerText == "o" && ID("b5").innerText == "o") ||
+    (ID("b6").innerText == "o" && ID("b7").innerText == "o" && ID("b8").innerText == "o") ||
+    (ID("b0").innerText == "o" && ID("b3").innerText == "o" && ID("b6").innerText == "o") ||
+    (ID("b1").innerText == "o" && ID("b4").innerText == "o" && ID("b7").innerText == "o") ||
+    (ID("b2").innerText == "o" && ID("b5").innerText == "o" && ID("b8").innerText == "o") ||
+    (ID("b0").innerText == "o" && ID("b4").innerText == "o" && ID("b8").innerText == "o") ||
+    (ID("b2").innerText == "o" && ID("b4").innerText == "o" && ID("b6").innerText == "o")) {
       displayResult("あなたの勝ちです。", "win");
       return;
   }
   // 負け
-  if((ID("b0").value == "x" && ID("b1").value == "x" && ID("b2").value == "x") ||
-    (ID("b3").value == "x" && ID("b4").value == "x" && ID("b5").value == "x") ||
-    (ID("b6").value == "x" && ID("b7").value == "x" && ID("b8").value == "x") ||
-    (ID("b0").value == "x" && ID("b3").value == "x" && ID("b6").value == "x") ||
-    (ID("b1").value == "x" && ID("b4").value == "x" && ID("b7").value == "x") ||
-    (ID("b2").value == "x" && ID("b5").value == "x" && ID("b8").value == "x") ||
-    (ID("b0").value == "x" && ID("b4").value == "x" && ID("b8").value == "x") ||
-    (ID("b2").value == "x" && ID("b4").value == "x" && ID("b6").value == "x")) {
+  if((ID("b0").innerText == "x" && ID("b1").innerText == "x" && ID("b2").innerText == "x") ||
+    (ID("b3").innerText == "x" && ID("b4").innerText == "x" && ID("b5").innerText == "x") ||
+    (ID("b6").innerText == "x" && ID("b7").innerText == "x" && ID("b8").innerText == "x") ||
+    (ID("b0").innerText == "x" && ID("b3").innerText == "x" && ID("b6").innerText == "x") ||
+    (ID("b1").innerText == "x" && ID("b4").innerText == "x" && ID("b7").innerText == "x") ||
+    (ID("b2").innerText == "x" && ID("b5").innerText == "x" && ID("b8").innerText == "x") ||
+    (ID("b0").innerText == "x" && ID("b4").innerText == "x" && ID("b8").innerText == "x") ||
+    (ID("b2").innerText == "x" && ID("b4").innerText == "x" && ID("b6").innerText == "x")) {
       displayResult("CPUの勝ちです。", "lose");
       return;
   }
