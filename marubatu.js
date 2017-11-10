@@ -107,7 +107,7 @@ function displayResult(res, cName) {
 function clearBoard() { 
   turn = 0;
   for(var n = 0; n < 9; n++) {
-    ID("b" + String(n)).value = " ";
+    ID("b" + String(n)).innerText = "";
   }
   ID("result").innerHTML = "";
   ID("result").className = "ready";
