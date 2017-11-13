@@ -97,7 +97,7 @@ function judge() {
 }
 
 // 結果の表示
-function displayResult(res, cName) {
+function displayResult(res, cName) { 
   ID("result").innerHTML = res;
   ID("result").className = cName;
   isRun = false;
